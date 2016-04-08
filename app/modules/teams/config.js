@@ -37,7 +37,7 @@ function config($stateProvider) {
   $stateProvider
   .state('teams', {
     url: '/',
-    controller: 'TeamsController as teamCtrl',
+    controller: 'TeamsController as teamsCtrl',
     template: require('./views/teams.html')
   })
   .state('new_team', {

@@ -2,13 +2,15 @@
 
   <div class="newtop">
     <h1>
-      New Team
+    {{ }}
     </h1>
-      <p> Create a new team of Marvel superheroes</p>
+      <p> {{ }}</p>
   </div>
+
   <br>
+
   <form>
-    <input type="text" placeholder="Character" ng-model="newCtrl.name">
+    <input type="text" placeholder="Team Name" ng-model="newCtrl.name">
     <input type="submit" value="Create Team" ng-click="newCtrl.addCharacter()">
   </form>
 </div>
