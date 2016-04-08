@@ -20,9 +20,21 @@ class NewTeamController {
   constructor($http, $state) {
     this._$http = $http;
     this._$state = $state;
+    this.name = "";
+    this.creator = "";
   }
 
   createTeam() {
+    this._$http
+    .post(`https://teams.mybluemix.net/api/teams`, {
+      name: this.name,
+      creator: this.creator
+    })
+    .then((response) => {
+      $state.go('edit_team', { id: response.data.id});
+    });
+    // do post, send name and creator
+      // $state.go('edit_team', { id: response.data.id });
   }
 }
 

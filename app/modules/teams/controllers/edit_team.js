@@ -32,7 +32,7 @@
             * image - assemble this from the thumbnail in the response
 
     STEP 5: In your .then to the second promise in STEP 4, add response.data to your heroes
-            array and clear the input field by resetting newHeroName
+            array and clear the input field by resetting newHeroName // <-- Don't understand
 
     STEP 6: In deleteCharacter, add a $http delete request to:
             https://teams.mybluemix.net/api/heroes/<hero id here>
@@ -45,18 +45,59 @@ class EditTeamController {
 
 	constructor($http, $stateParams) {
     this._$http = $http;
+		this.id = $stateParams.id;
+		this.newHeroName = "";
+		this.heroes = [];
 
 
     this.getData();
 	}
 
   getData() {
+
+		this._$http
+		.get(`https://teams.mybluemix.net/api/teams/${this.id}`)
+		.then((response) => {
+			console.log(response);
+			this.team = response.data;
+
+		});
+
+		this._$http
+		.get(`https://teams.mybluemix.net/api/heroes?filter[where][team_id]=${this.id}`)
+		.then((response) => {
+			console.log(response)
+			this.heroes = response.data;
+		});
+
   }
 
   addCharacter() {
+		this._$http
+		.get(`http://gateway.marvel.com:80/v1/public/characters?name=${this.newHeroName}&apikey=1c51377e8242564595ee97800ae287c7`)
+		.then((response) => {
+			console.log(response);
+
+			this._$http
+			.post(`https://teams.mybluemix.net/api/heroes`, {
+				team_id: this.id,
+				name: response.data.data.results[0].name
+			})
+			.then((response) => {
+				this.heroes.push(response.data);
+				this.newHeroName = "";
+			})
+
+		})
+
   }
 
   deleteCharacter(hero) {
+		this._$http
+		.delete(`https://teams.mybluemix.net/api/heroes/${hero.id}`)
+		.then((response) => {
+			this.heroes.splice(this.heroes.indexOf(hero), 1);
+		});
   }
 
 }
