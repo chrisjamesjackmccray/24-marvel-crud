@@ -1,16 +1,32 @@
+<h2 class="newteam">
+  Your Team
+</h2>
+
+ <h3 class="teamname">
+   Team Name
+ </h3>
+
+
 <div class="main">
 
   <div class="newtop">
-    <h1 c;ass="hone">
-    New Team
-    </h1>
-      <p class="des"> Create a new team of Marvel superheroes </p>
+    <h1 c;ass="hone"> New Team </h1> <p class="des"> Create a new team of Marvel superheroes. </p>
   </div>
+
+  <hr class="line">
 
   <br>
 
   <form>
-    <input type="text" placeholder="Team Name" ng-model="newCtrl.name">
-    <input type="submit" value="Create Team" ng-click="newCtrl.addCharacter()">
+
+     <input class="topbox" type="text" placeholder="The Avengers" ng-model="newCtrl.name">
+    <p class="textone"> What do you want to call your team of superheroes? </p>
+
+    <br>
+
+    <input class="bottombox" type="text" placeholder="User Name" ng-model="newCtrl.name">
+    <p class="textone"> We don't know how to log people in yet, so just tell us your name. </p>
+    <br>
+    <input class="input" type="submit" value="Create Team" ng-click="newCtrl.addCharacter()">
   </form>
 </div>
