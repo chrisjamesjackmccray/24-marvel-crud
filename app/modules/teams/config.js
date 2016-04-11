@@ -43,7 +43,7 @@ function config($stateProvider) {
   .state('new_team', {
     url: '/new',
     controller: 'NewTeamController as newCtrl',
-    template: require('./views/new_team.html')
+    template: require('./views/new_team.html') 
   })
   .state('edit_team', {
     url: '/:id/edit',
