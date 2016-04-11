@@ -85,7 +85,7 @@ class EditTeamController {
 				this.description = response.data.data.results[0].description;
 				this.team_id = this.id;
 				this.image = `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`;
-			})
+			});
 			.then((response) => {
 				this.heroes.push(response.data);
 				this.newHeroName = "";
