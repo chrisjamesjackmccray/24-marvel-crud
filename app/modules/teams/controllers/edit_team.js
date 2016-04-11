@@ -82,6 +82,7 @@ class EditTeamController {
 			.post(`https://teams.mybluemix.net/api/heroes`, {
 				team_id: this.id,
 				name: response.data.data.results[0].name
+				
 			})
 			.then((response) => {
 				this.heroes.push(response.data);
