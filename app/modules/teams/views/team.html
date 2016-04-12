@@ -1,42 +1,31 @@
-<h1>Add Characters </h1>
 
-<hr>
 
-<h2>
-  Superhero <br>
-  Name
-</h2>
+<a ui-sref="edit_team({ id: teamCtrl.id })">
+  Edit it
+</a>
 
-<form ng-hide="teamCtrl.addCharacters.length">
-  <input type="text" placeholder="team" ng-model="teamsCtrl.name">
-  <input type="submit" value="Add Hero" ng-click="teamCtrl.addCharacter()">
-</form>
 
- <p> Which hero do you want to add to your team? </p>
+<table>
+  <tbody>
 
- <table>
-   <tbody>
+    <tr ng-repeat="character in teamCtrl.heroes">
 
-     <tr ng-repeat="character in teamCtrl.characters">
+      <td class="imagetd">
+        <img class ="image" ng-src="{{ character.image }}">
+      </td>
 
-       <td class="imagetd">
-         <img class ="image" ng-src="{{ addCharacter.image }}">
-       </td>
+      <td class="des">
+        {{ character.name }}
+      </td>
 
-       <td class="des">
-         {{ addCharacter.name }}
-       </td>
-
-       <td class="descriptiontd">
-         {{ addCharacter.description }}
-       </td>
+      <td class="descriptiontd">
+        {{ character.description }}
+      </td>
 
 
 
-       <td class="ex">
-         <i class="fa fa-times-circle" ng-click="teamCtrl.deleteCharacter(character)"></i>
-       </td>
-     </tr>
-   </tbody>
- </table>
- </div>
+
+
+    </tr>
+  </tbody>
+</table>

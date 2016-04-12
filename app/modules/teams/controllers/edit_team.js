@@ -53,6 +53,7 @@ class EditTeamController {
     this.getData();
 	}
 
+
   getData() {
 
 		this._$http
@@ -72,6 +73,7 @@ class EditTeamController {
 
   }
 
+
   addCharacter() {
 		this._$http
 		.get(`http://gateway.marvel.com:80/v1/public/characters?name=${this.newHeroName}&apikey=1c51377e8242564595ee97800ae287c7`)
@@ -81,19 +83,21 @@ class EditTeamController {
 			this._$http
 			.post(`https://teams.mybluemix.net/api/heroes`, {
 				name: response.data.data.results[0].name,
-				id: response.data.data.results[0].id,
+				marvel_id: response.data.data.results[0].id,
 				description: response.data.data.results[0].description,
 				team_id: this.id,
 				image: `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`
 			})
 			.then((response) => {
-				this.heroes.push(response.data.name);
+				this.heroes.push(response.data);
 				this.newHeroName = "";
 			});
+
 
 		})
 
   }
+
 
   deleteCharacter(hero) {
 		this._$http
