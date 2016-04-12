@@ -80,16 +80,16 @@ class EditTeamController {
 
 			this._$http
 			.post(`https://teams.mybluemix.net/api/heroes`, {
-				this.name = response.data.data.results[0].name;
-				this.id = response.data.data.results[0].id;
-				this.description = response.data.data.results[0].description;
-				this.team_id = this.id;
-				this.image = `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`;
-			});
+				name: response.data.data.results[0].name,
+				id: response.data.data.results[0].id,
+				description: response.data.data.results[0].description,
+				team_id: this.id,
+				image: `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`
+			})
 			.then((response) => {
 				this.heroes.push(response.data);
 				this.newHeroName = "";
-			})
+			});
 
 		})
 

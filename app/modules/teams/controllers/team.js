@@ -37,7 +37,7 @@ class TeamController {
 			this.team = response.data;
 		});
 		this._$http
-		.get(`https://teams.mybluemix.net/api/heroes?filter${team.id} = ${this.id}`)
+		.get(`https://teams.mybluemix.net/api/heroes?filter[where][team_id]=${this.id}`)
 		.then((response) => {
 			this.heroes = response.data;
 		})

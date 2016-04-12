@@ -19,14 +19,14 @@
 
   <form>
 
-     <input class="topbox" type="text" placeholder="The Avengers" ng-model="newCtrl.id">
+     <input class="topbox" type="text" placeholder="The Avengers" ng-model="newCtrl.name">
     <p class="textone"> What do you want to call your team of superheroes? </p>
 
     <br>
 
-    <input class="bottombox" type="text" placeholder="User Name" ng-model="newCtrl.name">
+    <input class="bottombox" type="text" placeholder="User Name" ng-model="newCtrl.creator">
     <p class="textone"> We don't know how to log people in yet, so just tell us your name. </p>
     <br>
-    <input class="input" type="submit" value="Create Team" ng-click="newCtrl.addCharacter()">
+    <input class="input" type="submit" value="Create Team" ng-click="newCtrl.createTeam()">
   </form>
 </div>
