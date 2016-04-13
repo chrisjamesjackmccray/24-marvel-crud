@@ -62,16 +62,46 @@ h3 {
 
 .image {
   width: 200px;
-  margin: 0 0 0 200px; }
+  margin: 0 10px 20px 0; }
 
 .des {
+  position: absolute;
   font-size: 3rem;
   font-weight: 900;
-  margin: 0 0 0 10px; }
+  margin: 0 0 0 0; }
 
 .descriptiontd {
-  padding: 0 400px 0 0;
+  padding: 0 -20px 0 0;
   margin: 0 200px 0 0; }
 
 .main {
-  width: 1000px; }
+  width: 800px;
+  margin: 0 auto; }
+
+.fa.fa-times-circle {
+  position: absolute;
+  color: #DC143C;
+  font-size: 2rem;
+  margin: -100px 0 0 0; }
+
+.title {
+  font-size: 3rem;
+  font-family: helvetica;
+  margin: 0 0 20px 312px;
+  color: #313131; }
+
+.line {
+  margin: 0 0 20px 296px; }
+
+.textfield {
+  width: 500px;
+  height: 30px;
+  margin: 0 0 0 202px; }
+
+.button {
+  margin: 0 0 0 20px; }
+
+.paragraph {
+  color: #A1A1A1;
+  margin: 5px 0 40px 200px;
+  width: 400px; }

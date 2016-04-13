@@ -1,7 +1,9 @@
 
-<h3> Editing The Whatevers </h3>
+<h4 class="title"> Edit Your Team </h3>
 
-<hr>
+<hr class="line">
+
+<br>
 
 
 
@@ -9,10 +11,14 @@
 
 <div class="main">
 
-  <form ng-hide="editCtrl.heroes.length >= 6">
-    <input type="text" placeholder="Character" ng-model="editCtrl.newHeroName">
-    <input type="submit" value="Add" ng-click="editCtrl.addCharacter()">
+  <form class="textbox" ng-hide="editCtrl.heroes.length >= 6">
+    <input class="textfield" type="text" placeholder="Character" ng-model="editCtrl.newHeroName">
+    <input class="button" type="submit" value="Add Hero" ng-click="editCtrl.addCharacter()">
   </form>
+
+  
+
+  <p class="paragraph"> Which hero do you want to add to your team? </p>
 
   <div ng-show="editCtrl.heroes.length >= 6">
     <a ui-sref="teams">
