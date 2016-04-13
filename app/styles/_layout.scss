@@ -83,7 +83,7 @@ h3 {
 // END: NEW TEAM CSS
 
 
-//START: Team Edit CSS
+// START: Team Edit CSS
 
 .image {
   width: 200px;
@@ -166,9 +166,9 @@ h3 {
   font-size: 2rem;
 }
 
-//END: Team Edit CSS
+// END: Team Edit Edit CSS
 
-
+// START: Teams Edit CSS
 .maintwo {
   width: 800px;
   margin: 0 auto;
@@ -184,4 +184,38 @@ h3 {
 .alllist {
   margin: 10px 0 0 0;
   padding: 0 0 0 0;
+}
+
+.usercreated {
+  position: absolute;
+  margin: 25px 0 0 180px;
+  width: 350px;
+  float: left;
+  color: #878787;
+}
+
+.buttonnewteam {
+  float: right;
+  margin: 20px 0 0 0;
+}
+
+// END: Teams CSS
+
+// Start: Teams CSS
+
+
+.mainthree {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.yourteam {
+  float: left;
+  margin: 0 0 0 0;
+  font-size: 2rem;
+}
+
+.imagethree {
+  width: 200px;
+  margin: 0 10px 20px 0;
 }

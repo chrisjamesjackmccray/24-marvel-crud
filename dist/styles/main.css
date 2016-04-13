@@ -136,3 +136,27 @@ h3 {
 .alllist {
   margin: 10px 0 0 0;
   padding: 0 0 0 0; }
+
+.usercreated {
+  position: absolute;
+  margin: 25px 0 0 180px;
+  width: 350px;
+  float: left;
+  color: #878787; }
+
+.buttonnewteam {
+  float: right;
+  margin: 20px 0 0 0; }
+
+.mainthree {
+  width: 800px;
+  margin: 0 auto; }
+
+.yourteam {
+  float: left;
+  margin: 0 0 0 0;
+  font-size: 2rem; }
+
+.imagethree {
+  width: 200px;
+  margin: 0 10px 20px 0; }

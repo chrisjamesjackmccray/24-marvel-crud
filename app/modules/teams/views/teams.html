@@ -5,13 +5,15 @@
 
 <div class="maintwo">
   <h2 class="teamstitle"> Teams! <h2>
-    <p> User created teams of Marvel superheroes. </p>
+    <p class="usercreated"> User created teams of Marvel superheroes. </p>
+    <input class="buttonnewteam" type="submit" value="New Team" ng-click="newCtrl.addCharacter()">
+
 
     <br>
     <br>
     <br>
 
-
+    <hr>
   <ul>
     <li class="alllist" ng-repeat="links in teamsCtrl.teams">
 

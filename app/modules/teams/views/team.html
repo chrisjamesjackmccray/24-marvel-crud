@@ -1,32 +1,39 @@
 
 
 
-<a ui-sref="edit_team({ id: teamCtrl.id })">
-  Edit it
-</a>
 
 
-<table>
-  <tbody>
+<div class="mainthree">
+  <h2 class="yourteam"> Your Team </h2>
+  <br>
+  <br>
+  <br>
+  <a ui-sref="edit_team({ id: teamCtrl.id })">
+    Edit it
+  </a>
 
-    <tr ng-repeat="character in teamCtrl.heroes">
+  <table>
+    <tbody>
 
-      <td class="imagetd">
-        <img class ="image" ng-src="{{ character.image }}">
-      </td>
+      <tr ng-repeat="character in teamCtrl.heroes">
 
-      <td class="des">
-        {{ character.name }}
-      </td>
+        <td class="imagetd">
+          <img class ="imagethree" ng-src="{{ character.image }}">
+        </td>
 
-      <td class="descriptiontd">
-        {{ character.description }}
-      </td>
+        <td class="des">
+          {{ character.name }}
+        </td>
+
+        <td class="descriptiontd">
+          {{ character.description }}
+        </td>
 
 
 
 
 
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+</div>
