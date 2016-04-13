@@ -1,39 +1,52 @@
 
-<form ng-hide="editCtrl.heroes.length >= 6">
-  <input type="text" placeholder="Character" ng-model="editCtrl.newHeroName">
-  <input type="submit" value="Add" ng-click="editCtrl.addCharacter()">
-</form>
+<h3> Editing The Whatevers </h3>
 
-<div ng-show="editCtrl.heroes.length >= 6">
-  <a ui-sref="teams">
-    Go back to the team list
-  </a>
+<hr>
+
+
+
+
+
+<div class="main">
+
+  <form ng-hide="editCtrl.heroes.length >= 6">
+    <input type="text" placeholder="Character" ng-model="editCtrl.newHeroName">
+    <input type="submit" value="Add" ng-click="editCtrl.addCharacter()">
+  </form>
+
+  <div ng-show="editCtrl.heroes.length >= 6">
+    <a ui-sref="teams">
+      Go back to the team list
+    </a>
+  </div>
+
+
+
+  <table>
+    <tbody>
+
+      <tr ng-repeat="character in editCtrl.heroes">
+
+        <td class="imagetd">
+          <img class ="image" ng-src="{{ character.image }}">
+        </td>
+
+        <td class="des">
+          {{ character.name }}
+        </td>
+
+        <td class="descriptiontd">
+          {{ character.description }}
+        </td>
+
+
+
+
+        <td class="ex">
+          <i class="fa fa-times-circle" ng-click="editCtrl.deleteCharacter(character)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
 </div>
-
-
-<table>
-  <tbody>
-
-    <tr ng-repeat="character in editCtrl.heroes">
-
-      <td class="imagetd">
-        <img class ="image" ng-src="{{ character.image }}">
-      </td>
-
-      <td class="des">
-        {{ character.name }}
-      </td>
-
-      <td class="descriptiontd">
-        {{ character.description }}
-      </td>
-
-
-
-
-      <td class="ex">
-        <i class="fa fa-times-circle" ng-click="editCtrl.deleteCharacter(character)"></i>
-      </td>
-    </tr>
-  </tbody>
-</table>

@@ -59,3 +59,19 @@ h2 {
 
 h3 {
   font-size: medium; }
+
+.image {
+  width: 200px;
+  margin: 0 0 0 200px; }
+
+.des {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0 0 0 10px; }
+
+.descriptiontd {
+  padding: 0 400px 0 0;
+  margin: 0 200px 0 0; }
+
+.main {
+  width: 1000px; }
