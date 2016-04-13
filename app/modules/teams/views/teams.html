@@ -1,14 +1,26 @@
-<ul>
-  <li ng-repeat="links in teamsCtrl.teams">
-
-    <a ui-sref="team({ id: links.id })">
-      {{ links.name }}
-      {{ links.creator }}
-    </a>
-
-  </li>
 
 
 
 
-</ul>
+
+<div class="maintwo">
+  <h2 class="teamstitle"> Teams! <h2>
+    <p> User created teams of Marvel superheroes. </p>
+
+    <br>
+    <br>
+    <br>
+
+
+  <ul>
+    <li class="alllist" ng-repeat="links in teamsCtrl.teams">
+
+      <a ui-sref="team({ id: links.id })">
+        {{ links.name }}
+        {{ links.creator }}
+      </a>
+
+    </li>
+
+  </ul>
+</div>

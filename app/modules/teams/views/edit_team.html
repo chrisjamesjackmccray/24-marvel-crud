@@ -1,6 +1,7 @@
 
 <h4 class="title"> Edit Your Team </h3>
 
+
 <hr class="line">
 
 <br>
@@ -15,14 +16,16 @@
   <form class="textbox" ng-hide="editCtrl.heroes.length >= 6">
     <input class="textfield" type="text" placeholder="Character" ng-model="editCtrl.newHeroName">
     <input class="button" type="submit" value="Add Hero" ng-click="editCtrl.addCharacter()">
+    <h3 class="htwo"> Superhero &nbsp &nbsp &nbsp &nbsp &nbsp Name </h3>
+
+    <p class="paragraph"> Which hero do you want to add to your team? </p>
   </form>
 
-  <h3 class="htwo"> Superhero &nbsp &nbsp &nbsp &nbsp &nbsp Name </h3>
 
-  <p class="paragraph"> Which hero do you want to add to your team? </p>
 
   <div ng-show="editCtrl.heroes.length >= 6">
-    <a ui-sref="teams">
+    <h3 class="show"> Your team is complete. </h3>
+    <a class="teamlist" ui-sref="teams">
       Go back to the team list
     </a>
   </div>
