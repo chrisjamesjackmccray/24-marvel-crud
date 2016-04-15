@@ -11,7 +11,8 @@
 
 class TeamsController {
 
-	constructor($http) {
+	constructor($http, $state) {
+		this._$state = $state;
     this._$http = $http;
     this.getData();
 	}
@@ -23,6 +24,10 @@ class TeamsController {
 			this.teams = response.data;
 		})
   }
+
+	addTeam() {
+		this._$state.go('new_team');		
+	}
 
 }
 
